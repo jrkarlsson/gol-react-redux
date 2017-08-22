@@ -1,0 +1,21 @@
+@import '../../../shared/mixins';
+
+.game-controls {
+    align-items: flex-end;
+    display:flex;
+    flex: 0 0 50%;
+    justify-content: flex-end;
+
+    button {
+        @include btn();
+        margin-right: 0.5rem;
+
+        i:before {
+            margin-right: 0.5rem;
+        }
+
+        &:last-of-type {
+            margin-left: 3rem;
+        }
+    }
+}

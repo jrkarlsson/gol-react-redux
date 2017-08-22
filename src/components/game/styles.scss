@@ -1,0 +1,17 @@
+@import '../../shared/reset';
+@import '../../shared/colors';
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+body, button, input, h1, h2, h3, h4 {
+    color: $color-white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+
+h4 {
+    margin: 1rem 0 0.3rem 0;
+}
+

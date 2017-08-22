@@ -1,0 +1,14 @@
+@import '../../shared/colors';
+@import '../../shared/mixins';
+
+.game-panel {
+    background: $color-teal;
+    background: -moz-linear-gradient(-45deg, $color-teal 0%,  100%);
+    background: -webkit-linear-gradient(-45deg, $color-teal 0%,$color-purple 100%);
+    background: linear-gradient(135deg, $color-teal 0%,$color-purple 100%);
+    padding: 3rem;
+
+    .game-panel-components {
+        display: flex;
+    }
+}

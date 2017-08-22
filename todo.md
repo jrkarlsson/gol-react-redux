@@ -1,0 +1,4 @@
+- [x] Refactor game-panel into three components: panel, game-settings, game-controls
+- [ ] Refactor game-settings so that they are "responsive"
+- [ ] Refactor game-settings into smaller components
+- [ ] Implement a preset picker and placement

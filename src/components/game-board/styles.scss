@@ -1,0 +1,41 @@
+@import '../../shared/colors';
+
+.game-board {
+    .row {
+        display: flex;
+        margin: 1px 0 0 0;
+
+        .cell {
+            flex: 1 0 auto;
+            margin: 0 1px 0 0;
+            // transition: all 0.1s ease-in;
+
+            &:last-of-type {
+                margin: 0;
+            }
+
+            &:before {
+                content: '';
+                float: left;
+                padding-top: 100%;
+            }
+
+
+            &.alive {
+                background: $color-green;
+
+                &:hover {
+                    background: $color-green-light;
+                }
+            }
+
+            &.dead {
+                background: $color-gray;
+
+                &:hover {
+                    background: $color-gray-light;
+                }
+            }
+        }
+    }
+}
