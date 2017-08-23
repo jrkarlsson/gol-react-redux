@@ -22,6 +22,48 @@ let countAliveNeighbours = (y, x, state, size)  => {
   return aliveCount;
 };
 
+let appendRow = (row, newSize) => {
+  let len;
+  
+  if(Array.isArray(row)) {
+    len = newSize - row.length;
+  }
+  else {
+    len = newSize;
+    row = [];
+  }
+  
+  for(let i = 0; i < len; i++) {
+    row.push(false);
+  }
+  
+  return row;
+};
+
+let appendBoard = (state, newSizeY, newSizeX) => {
+  let updatedBoard = helpers.clone2DArray(state);
+
+  for(let i = 0; i < newSizeY; i++) {
+    updatedBoard[i] = appendRow(updatedBoard[i], newSizeX);
+  }
+
+  return updatedBoard;
+};
+
+let subtractRow = (row, newSize) => {
+  return row.slice(0, newSize);
+};
+
+let subtractBoard = (state, newSizeY, newSizeX) => {
+  let updatedBoard = helpers.clone2DArray(state).slice(0, newSizeY);
+  
+  for(let i = 0; i < newSizeY; i++) {
+    updatedBoard[i] = subtractRow(updatedBoard[i], newSizeX);
+  }
+
+  return updatedBoard;
+};
+
 export default function gameBoardReducer(state = [], action) {
   switch (action.type) {
 
@@ -80,6 +122,14 @@ export default function gameBoardReducer(state = [], action) {
       }
 
       return Object.assign([], state, nextState);
+    }
+
+    case actions.GAME_BOARD_APPEND: {
+      return appendBoard(state, action.config.sizeY, action.config.sizeX);
+    }
+    
+    case actions.GAME_BOARD_SUBTRACT: {
+      return subtractBoard(state, action.config.sizeY, action.config.sizeX);
     }
 
     default:

@@ -25,6 +25,11 @@ export default class GameBoard extends Component {
         this.stop();
       }
     }
+
+    if(this.props.control.running && (this.props.config.speed !== nextProps.config.speed)) {
+      this.stop();
+      this.start();
+    }
   }
 
   start() {
@@ -33,6 +38,7 @@ export default class GameBoard extends Component {
 
   stop() {
     clearInterval(this.state.interval);
+    this.setState({interval: null});
   }
 
   render() {

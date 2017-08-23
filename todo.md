@@ -1,4 +1,6 @@
 - [x] Refactor game-panel into three components: panel, game-settings, game-controls
-- [ ] Refactor game-settings so that they are "responsive"
+- [x] Refactor game-settings so that they are working as intended
 - [ ] Refactor game-settings into smaller components
+- [ ] Remove css transition at higher speeds
+- [ ] Implement/Refactor responsive design for handheld devices
 - [ ] Implement a preset picker and placement

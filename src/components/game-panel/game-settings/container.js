@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
 import GameSettingsPresentation from './presentation';
-import {incSpeed, decSpeed, incSize, decSize} from './actions';
+import {incSpeed, decSpeed, incSizeAsync, decSizeAsync} from './actions';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = state => {
   return {
     speed: state.config.speed,
     size: state.config.sizeX
   };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = dispatch => {
   return {
     incSpeed: () => {
       dispatch(incSpeed());
@@ -18,10 +18,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
       dispatch(decSpeed());
     },
     incSize: () => {
-      dispatch(incSize());
+      dispatch(incSizeAsync());
     },
     decSize: () => {
-      dispatch(decSize());
+      dispatch(decSizeAsync());
     },
   };
 };
