@@ -32,3 +32,9 @@
         color: $color-white;
     }
 }
+
+@mixin media($size) {
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}

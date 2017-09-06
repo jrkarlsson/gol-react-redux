@@ -8,18 +8,18 @@ const GameControlsPresentation = ({speed, incSpeed, decSpeed, size, incSize, dec
     <div className="minus-plus">
       <h4>Speed</h4>
       <div className="minus-plus-container">
-        <button onClick={decSpeed}><i className="fa fa-minus"/></button>
+        <button onClick={decSpeed}><i className="fa fa-fw fa-minus"/></button>
         <div>{speed}</div>
-        <button onClick={incSpeed}><i className="fa fa-plus"/></button>
+        <button onClick={incSpeed}><i className="fa fa-fw fa-plus"/></button>
       </div>
     </div>
 
     <div className="minus-plus">
       <h4>Size</h4>
       <div className="minus-plus-container">
-        <button onClick={decSize}><i className="fa fa-minus"/></button>
+        <button onClick={decSize}><i className="fa fa-fw fa-minus"/></button>
         <div>{size}</div>
-        <button onClick={incSize}><i className="fa fa-plus"/></button>
+        <button onClick={incSize}><i className="fa fa-fw fa-plus"/></button>
       </div>
     </div>
   </div>

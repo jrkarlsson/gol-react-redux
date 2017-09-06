@@ -2,5 +2,5 @@
 - [x] Refactor game-settings so that they are working as intended
 - [ ] Refactor game-settings into smaller components
 - [ ] Remove css transition at higher speeds
-- [ ] Implement/Refactor responsive design for handheld devices
+- [x] Implement/Refactor responsive design for handheld devices
 - [ ] Implement a preset picker and placement

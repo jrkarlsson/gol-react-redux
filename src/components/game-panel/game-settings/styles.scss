@@ -1,9 +1,17 @@
 @import '../../../shared/colors';
 @import '../../../shared/mixins';
+@import '../../../shared/variables';
 
 .game-settings {
-    display: flex;
-    flex: 0 0 50%;
+    display: block;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    
+    @include media($screen-m) {
+        display: flex;
+        flex: 0 0 50%;
+        margin-bottom: 0;
+    }
 
     .minus-plus {
         display: inline-block;
@@ -16,13 +24,18 @@
             
             div {
                 display: inline-block;
-                width: 4rem;
+                width: 2rem;
+
+                @include media($screen-m) {
+                    width: 4rem;
+                }
             }
 
             button {
                 @include btn(false);
                 border: 0;
             }
+            
         }
     }
 }

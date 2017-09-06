@@ -1,21 +1,42 @@
 @import '../../../shared/mixins';
+@import '../../../shared/variables';
+
 
 .game-controls {
-    align-items: flex-end;
-    display:flex;
-    flex: 0 0 50%;
-    justify-content: flex-end;
+    display: block;
+    text-align: center;
+    
+    @include media($screen-m) {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex: 0 0 50%;
+    }
 
     button {
         @include btn();
         margin-right: 0.5rem;
 
-        i:before {
-            margin-right: 0.5rem;
+        &:last-of-type {
+            margin-left: 1.5rem;
         }
 
-        &:last-of-type {
-            margin-left: 3rem;
+        span {
+            display: none;
+        }
+
+        @include media($screen-l) {
+            &:last-of-type {
+                margin-left: 3rem;
+            }
+
+            i:before {
+                margin-right: 0.5rem;
+            }
+
+            span {
+                display: inline;
+            }
         }
     }
 }
