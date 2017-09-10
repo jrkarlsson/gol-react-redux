@@ -12,30 +12,4 @@
         flex: 0 0 50%;
         margin-bottom: 0;
     }
-
-    .minus-plus {
-        display: inline-block;
-        flex: 0 0 auto;
-        margin-right: 0.5rem;
-        text-align: center;
-
-        div.minus-plus-container {
-            border: 1px solid $color-white;
-            
-            div {
-                display: inline-block;
-                width: 2rem;
-
-                @include media($screen-m) {
-                    width: 4rem;
-                }
-            }
-
-            button {
-                @include btn(false);
-                border: 0;
-            }
-            
-        }
-    }
 }
