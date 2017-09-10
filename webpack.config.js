@@ -1,11 +1,11 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: __dirname + '/dist',
     filename: 'bundle.js',
-    publicPath: '/dist/'
   },
   module: {
     loaders: [
@@ -26,5 +26,6 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('bundle.css'),
+    new HtmlWebpackPlugin({template: './templates/index.ejs'}),
   ]
 };
